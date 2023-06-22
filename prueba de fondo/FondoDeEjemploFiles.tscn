@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fondo de inicio-files.jpg" type="Texture" id=1]
+[ext_resource path="res://fondo de ejemplo files.png" type="Texture" id=2]
+
+[node name="FondoDeEjemploFiles" type="Sprite"]
+position = Vector2( 191, -99 )
+scale = Vector2( 1, 0.916667 )
+texture = ExtResource( 2 )
+
+[node name="FondoDeEjemploFiles" type="Sprite" parent="."]
+position = Vector2( 384, 0 )
+texture = ExtResource( 2 )
+
+[node name="FondoDeEjemploFiles2" type="Sprite" parent="."]
+position = Vector2( 768, 0 )
+texture = ExtResource( 2 )
+
+[node name="FondoDeInicio-files" type="Sprite" parent="."]
+position = Vector2( -28, -0.545456 )
+scale = Vector2( 1.28125, 1.53788 )
+texture = ExtResource( 1 )

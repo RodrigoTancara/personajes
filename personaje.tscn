@@ -1,0 +1,43 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://papelera/modello de pj movimiento-32x34.jpg" type="Texture" id=1]
+[ext_resource path="res://papelera/modello de pj movimiento-32x32.jpg" type="Texture" id=2]
+[ext_resource path="res://papelera/modello de pj movimiento-32x33.jpg" type="Texture" id=3]
+[ext_resource path="res://papelera/modello de pj movimiento-32x35.jpg" type="Texture" id=4]
+[ext_resource path="res://papelera/ pj ataque-32x34.png" type="Texture" id=5]
+[ext_resource path="res://papelera/ pj ataque-32x32.png" type="Texture" id=6]
+[ext_resource path="res://papelera/ pj de salto32x33.png" type="Texture" id=7]
+[ext_resource path="res://papelera/ pj de salto32x34.png" type="Texture" id=8]
+[ext_resource path="res://papelera/ pj de salto32x32.png" type="Texture" id=9]
+[ext_resource path="res://papelera/ pj de salto32x35.png" type="Texture" id=10]
+[ext_resource path="res://papelera/ pj de salto32x36.png" type="Texture" id=11]
+[ext_resource path="res://papelera/ pj ataque-32x33.png" type="Texture" id=12]
+[ext_resource path="res://papelera/ pj ataque-32x35.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "salto",
+"speed": 5.0
+} ]
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 3, -0.5 )
+scale = Vector2( 0.9375, 1.03125 )
+frames = SubResource( 1 )
+animation = "ataque"
+frame = 1
+centered = false

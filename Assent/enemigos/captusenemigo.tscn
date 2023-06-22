@@ -1,0 +1,53 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assent/enemigos/enemigo captus.gd" type="Script" id=1]
+[ext_resource path="res://Assent/enemigos/cactus9.png" type="Texture" id=2]
+[ext_resource path="res://Assent/enemigos/cactus2.png" type="Texture" id=3]
+[ext_resource path="res://Assent/enemigos/cactus7.png" type="Texture" id=4]
+[ext_resource path="res://Assent/enemigos/cactus8.png" type="Texture" id=5]
+[ext_resource path="res://Assent/enemigos/cactus3.png" type="Texture" id=6]
+[ext_resource path="res://Assent/enemigos/cactus1.png" type="Texture" id=7]
+[ext_resource path="res://Assent/enemigos/cactus4.png" type="Texture" id=8]
+[ext_resource path="res://Assent/enemigos/cactus5.png" type="Texture" id=9]
+[ext_resource path="res://Assent/enemigos/cactus6.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "movimiento",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "quieto",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 22.0
+height = 32.0
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( -62, 3 )
+b = Vector2( 77, 5 )
+
+[node name="captusenemigo" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 50, -5.50005 )
+scale = Vector2( 2.56667, 1.91666 )
+frames = SubResource( 1 )
+animation = "movimiento"
+frame = 4
+speed_scale = 4.0
+playing = true
+
+[node name="mataelenemigo" type="CollisionShape2D" parent="."]
+position = Vector2( 54, 2 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 50, -2 )
+shape = SubResource( 3 )

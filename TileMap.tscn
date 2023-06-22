@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://fondos/fondo de inicio-completo12-files.png" type="Texture" id=1]
+
+[node name="TileMap" type="TileMap"]
+format = 1
+
+[node name="FondoDeInicio-completo12-files" type="Sprite" parent="."]
+position = Vector2( 128, -71 )
+texture = ExtResource( 1 )
